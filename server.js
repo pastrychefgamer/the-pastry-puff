@@ -3,6 +3,8 @@ const port = 3000;
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 
+require('dotenv').config()
+
 
 const app = express();
 
