@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+    <h1>I'm here!! Can't wait to work!</h1>
+    <section id="flightDetails">
+        <div>Airline: <%=flight.airline%></div><br>
+        <div>Flight Number: <%=flight.flightNo%></div><br>
+        <div>Departs: <%=flight.departs%></div><br>
+        <div>Airport: <%=flight.airport%></div><br>
+        <div>Destination: <%=flight.destinations.length%></div><br>
+        <%if (flight.destinations.length) {%>
+            <div>Destination: <%flight.destinations.forEach(function (dest) {%>
+                <div>
+                    <label>Destination Airport</label>
+                    <%=dest.airport%><br>
+                    <label>Arrival Time</label>
+                    <%=dest.arrival%><br>
+                </div>
+            <%});%>
+        </div><br>
+        <%}%>
+    </section>
+
+<%- include('../partials/footer') %>
