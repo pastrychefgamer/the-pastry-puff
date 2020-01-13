@@ -14,6 +14,12 @@ require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const foodieRouter = require('./routes/foodies');
+const breadRouter = require('./routes/breads');
+const cakeRouter = require('./routes/cakes')
+const cookieRouter = require('./routes/cookies')
+const candyRouter = require('./routes/candies')
+const pieRouter = require('./routes/pies')
+const miscRouter = require('./routes/misc')
 
 // Configure Express App app.set()
 app.set('view engine', 'ejs');
@@ -34,6 +40,12 @@ app.use(passport.session());
 // Mount Routes app.use()
 app.use('/', indexRouter);
 app.use('/', foodieRouter);
+app.use('/', breadRouter);
+app.use('/', cakeRouter);
+app.use('/', cookieRouter);
+app.use('/', candyRouter);
+app.use('/', pieRouter);
+app.use('/', miscRouter);
 
 // Tell App to listen
 app.listen(port, () => {
