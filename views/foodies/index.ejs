@@ -2,5 +2,10 @@
 
     <h1>I'm here!! Can't wait to work!</h1>
 
+    <div id="foodies" class="col s12">
+        <% foodies.forEach(function(foodie) { %>
+            <h1><%= foodie.name %></h1>
+        <% }) %>
+    </div>
 
 <%- include('../partials/footer') %>

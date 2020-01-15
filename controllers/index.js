@@ -3,5 +3,8 @@ module.exports = {
 };
 
 function index(req, res) {
-    res.render('index', { title: 'Im here'});
+    console.log(req.user);
+    res.render('index', {title: 'Im here',
+        user: req.user
+    });
 }

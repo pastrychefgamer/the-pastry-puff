@@ -2,5 +2,37 @@
 
     <h1>BREAD!</h1>
 
+    <main class="container">
+        <div class="row">
+            <div id="foodies" class="col s12">
+            <% foodies.forEach(function(foodie) { %>
+                <div class="card purple">
+                <div class="card-content white-text">
+                    <div>
+                    <span class="card-title">
+                        <i class="small material-icons">perm_identity</i>
+                        <span class="foodie-name"><%= foodie.name %></span>
+                        <% if (foodie.group) { %><span class="badge white">Pastry <%= foodie.group %></span><% } %>
+                    </span>
+                    </div>
+                    <ul class="collection">
+                    <% foodie.posts.forEach(function(post) { %>
+                        <li class="collection-item blue-grey-text text-darken-2"><%= post.text %></li>
+                    <% }) %>
+                    </ul>
+                    <!-- Place Add Fact UI Here -->
+                    <% if (foodie._id.equals(user && user._id)) { %>
+                    <div class="card-action">
+                        <form action="/" method="POST">
+                        <input type="text" name="text" class="white-text">
+                        <button type="submit" class="btn white-text">Add Fact</button>
+                        </form>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <% }) %>
+            </div>
+        </div>
 
 <%- include('../partials/footer') %>

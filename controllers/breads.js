@@ -1,12 +1,13 @@
-const Bread = require('../models/feed');
+const Foodie = require('../models/feed');
 
 module.exports = {
     index
 };
 
 function index(req, res) {
-    Bread.find({}, function(err, breads) {
-        res.render('breads/index', { title: 'Breads', breads,
+    Foodie.find({}, function(err, foodies) {
+        console.log(foodies);
+        res.render('foodies/index', { title: 'Breads', foodies,
         user: req.user
         });
     });
