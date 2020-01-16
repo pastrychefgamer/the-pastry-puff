@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Room Details</title>
+</head>
+<body>
+    <h1>Room Details</h1>
+    <h2><%= room.title %></h2>
+    <h2>This is where the comments will be</h2>
+    <% room.comments.forEach(function(comment) { %>
+        <p> <%= comment.text %></p>
+    <%}) %>
+        <form action="/rooms/<%=room._id%>/comments" method="POST">
+            <input type="text" name="text">
+            <button type="submit">Make A Comment</button>
+        </form>
+</body>
+</html>

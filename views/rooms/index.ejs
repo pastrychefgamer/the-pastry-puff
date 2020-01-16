@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Here are the rooms! Pick one!</h1>
+    <% rooms.forEach(function(room) { %>
+        <a href="/rooms/<%=room._id%>"><p><%= room.title %></p></a>
+
+    <%})%>
+</body>
+</html>

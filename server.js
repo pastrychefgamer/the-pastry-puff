@@ -15,11 +15,12 @@ require('./config/passport');
 const indexRouter = require('./routes/index');
 const foodieRouter = require('./routes/foodies');
 const breadRouter = require('./routes/breads');
-const cakeRouter = require('./routes/cakes')
-const cookieRouter = require('./routes/cookies')
-const candyRouter = require('./routes/candies')
-const pieRouter = require('./routes/pies')
-const miscRouter = require('./routes/misc')
+const cakeRouter = require('./routes/cakes');
+const cookieRouter = require('./routes/cookies');
+const candyRouter = require('./routes/candies');
+const pieRouter = require('./routes/pies');
+const miscRouter = require('./routes/misc');
+const roomRouter = require('./routes/rooms');
 
 // Configure Express App app.set()
 app.set('view engine', 'ejs');
@@ -46,6 +47,7 @@ app.use('/', cookieRouter);
 app.use('/', candyRouter);
 app.use('/', pieRouter);
 app.use('/', miscRouter);
+app.use('/rooms', roomRouter);
 
 // Tell App to listen
 app.listen(port, () => {
