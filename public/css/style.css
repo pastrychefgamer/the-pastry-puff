@@ -24,11 +24,17 @@ br {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
+}
+
+#rooms:visited {
+    color: coral;
 }
 
 #comment-box {
     border: 1px black solid;
-    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .postcard {
