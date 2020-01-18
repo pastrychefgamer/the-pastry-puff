@@ -10,9 +10,14 @@ nav {
 }
 
 button {
-    background-color: aqua;
+    background-color: darkcyan;
     margin: 20px;
     justify-content: right;
+}
+
+br {
+    background-color: darkcyan;
+    margin: 150px;
 }
 
 #rooms {
