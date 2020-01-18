@@ -20,11 +20,19 @@ br {
     margin: 150px;
 }
 
+h1 {
+    background-color: lightcyan;
+}
+
+h2 {
+    background-color: lightcyan;
+}
+
 #rooms {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #rooms:visited {
@@ -37,8 +45,9 @@ br {
     align-items: center;
 }
 
-#main-background {
-    background-color: darkgoldenrod;
+#del-btn {
+    background-color: lightsalmon;
+    font-family: 'Poppins', sans-serif;
 }
 
 .postcard {

@@ -1,12 +1,11 @@
 <%- include('../partials/header') %>
 
     <h1><%= room.title %></h1>
-    <!-- <h2>This is where the comments will be</h2> -->
     <div id="comment-box" class="container"></div>
     <% room.comments.forEach(function(comment) { %>
         <p> <%= comment.text %></p>
         <form action="/rooms/<%=room._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
-        <button>DELETE</button>
+        <button id="del-btn">DELETE</button>
         </form>
     <%}) %>
     <div class="postcard container">
