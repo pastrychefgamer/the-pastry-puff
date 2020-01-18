@@ -3,6 +3,9 @@
 Need to tell the world your story about some pastries?!
 Well, come by The Pastry Puff and share with the world!
 
+# Screenshot(s)
+![A test image](testImage.png)
+
 ## Technologies used
 -Express
 -MongoDB
@@ -10,6 +13,9 @@ Well, come by The Pastry Puff and share with the world!
 -Materialize
 -Mongoose
 -Node.js
+-HTML
+-JavaScript
+-CSS
 
 ## Getting Started-click the link below
 https://the-pastry-puff.herokuapp.com/

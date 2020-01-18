@@ -37,6 +37,10 @@ br {
     align-items: center;
 }
 
+#main-background {
+    background-color: darkgoldenrod;
+}
+
 .postcard {
     margin-bottom: 10px;
 }
