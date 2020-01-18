@@ -1,18 +1,31 @@
-.brand-logo {
-    margin-left: 15px;
+* {
     font-family: 'Poppins', sans-serif;
+    justify-content: center;
 }
 
-.card .card-content .card-title {
-    margin-bottom: 10px;
+nav {
+    background-color: darksalmon;
+    justify-content: right;
+    display: flex;
 }
 
-header {
-    height: 100px;
+button {
+    background-color: aqua;
+    margin: 20px;
+    justify-content: right;
 }
 
-.collection-item {
+#rooms {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#comment-box {
+    border: 1px black solid;
+    justify-content: center;
+}
+
+.postcard {
+    margin-bottom: 10px;
 }

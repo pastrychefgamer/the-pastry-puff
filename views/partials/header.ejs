@@ -14,28 +14,27 @@
 
 <!-- JavaScript for Materialize -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title><%= title %></title>
 </head>
 <body>
-    <nav>
-        <a href="/cakes" class="waves-effect waves-light btn" <%- title === 'Cakes' ? 'class="active"' : '' %>>CAKES</a>
+        <!-- <a href="/cakes" class="waves-effect waves-light btn" <%- title === 'Cakes' ? 'class="active"' : '' %>>CAKES</a>
         <a href="/cookies" class="waves-effect waves-light btn" <%- title === 'Cookies' ? 'class="active"' : '' %>>COOKIES</a>
         <a href="/breads" class="waves-effect waves-light btn" <%- title === 'Bread' ? 'class="active"' : '' %>>BREAD</a>
         <a href="/candies" class="waves-effect waves-light btn" <%- title === 'Candy' ? 'class="active"' : '' %>>CANDY</a>
         <a href="/pies"  class="waves-effect waves-light btn"<%- title === 'Pies' ? 'class="active"' : '' %>>PIES</a>
-        <a href="/misc"  class="waves-effect waves-light btn"<%- title === 'All Others' ? 'class="active"' : '' %>>ALL OTHERS</a>
+        <a href="/misc"  class="waves-effect waves-light btn"<%- title === 'All Others' ? 'class="active"' : '' %>>ALL OTHERS</a> -->
 
         <ul class="right">
             <li>
             <li><a href="/foodies"><i class="material-icons left">home</i>Home</a></li>
             <!-- new html below -->
             <% if (user) { %>
+                <p><%=user.name%></p>
                 <a href="/logout" class="waves-effect waves-light btn"><i class="material-icons left">trending_flat</i>Log Out</a>
             <% } else { %>
-                <a href="/auth/google" class="waves-effect waves-light btn"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                <a href="/auth/google" class="waves-effect waves-light btn"><i class="material-icons left">vpn_key</i>Login</a>
             <% } %>
             </li>
         </ul>
-    </nav>
+
     <main>
         <h1><%= title %></h1>

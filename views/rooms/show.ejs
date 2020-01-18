@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Room Details</title>
-</head>
-<body>
-    <h1>Room Details</h1>
-    <h2><%= room.title %></h2>
-    <h2>This is where the comments will be</h2>
+<%- include('../partials/header') %>
+
+    <h1><%= room.title %></h1>
+    <!-- <h2>This is where the comments will be</h2> -->
+    <div id="comment-box" class="container"></div>
     <% room.comments.forEach(function(comment) { %>
         <p> <%= comment.text %></p>
-    <%}) %>
-        <form action="/rooms/<%=room._id%>/comments" method="POST">
-            <input type="text" name="text">
-            <button type="submit">Make A Comment</button>
+        <form action="/rooms/<%=room._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+        <button>DELETE</button>
         </form>
-</body>
-</html>
+    <%}) %>
+    <div class="postcard container">
+        <form action="/rooms/<%=room._id%>/comments" method="POST">
+            <input placeholder="COMMENT SOMETHING??" name="text">
+            <button type="submit" class="waves-effect waves-light btn">SUBMIT</button>
+        </form>
+    </div>
+
+<%- include('../partials/footer') %>

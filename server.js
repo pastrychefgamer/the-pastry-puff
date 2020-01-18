@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 const port = process.env.PORT || 3000; 
 
 require('dotenv').config()
@@ -14,12 +15,6 @@ require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const foodieRouter = require('./routes/foodies');
-const breadRouter = require('./routes/breads');
-const cakeRouter = require('./routes/cakes');
-const cookieRouter = require('./routes/cookies');
-const candyRouter = require('./routes/candies');
-const pieRouter = require('./routes/pies');
-const miscRouter = require('./routes/misc');
 const roomRouter = require('./routes/rooms');
 
 // Configure Express App app.set()
@@ -28,6 +23,7 @@ app.set('view engine', 'ejs');
 // Mount middleware app.use()
 app.use(logger('dev'));
 app.use(express.static('public'));
+app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
@@ -41,12 +37,6 @@ app.use(passport.session());
 // Mount Routes app.use()
 app.use('/', indexRouter);
 app.use('/', foodieRouter);
-app.use('/', breadRouter);
-app.use('/', cakeRouter);
-app.use('/', cookieRouter);
-app.use('/', candyRouter);
-app.use('/', pieRouter);
-app.use('/', miscRouter);
 app.use('/rooms', roomRouter);
 
 // Tell App to listen
