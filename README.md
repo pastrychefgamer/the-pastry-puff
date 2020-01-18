@@ -4,7 +4,7 @@ Need to tell the world your story about some pastries?!
 Well, come by The Pastry Puff and share with the world!
 
 # Screenshot(s)
-![A test image](testImage.png)
+![A test image](testImage.jpg)
 
 ## Technologies used
 -Express
